@@ -1,3 +1,9 @@
 // Set up your root reducer here...
  import { combineReducers } from 'redux';
- export default combineReducers;
+ import board from './boardReducer';
+
+ const rootReducer = combineReducers({
+   board
+ });
+
+ export default rootReducer;
