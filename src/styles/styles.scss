@@ -1,16 +1,26 @@
+// Colors: https://coolors.co/546a76-889da8-b3c5ce-c9d5db-d4ecf9
+$background-color: #B3C5CE;
+$primary-color: #546A76;
+$secondary-color: #889DA8;
+
 html {
   font-size: 1em;
-  background-color: #B3C5CE;
+  background-color: $background-color;
 }
 
 .stripe {
-  stroke: #889DA8;
-  stroke-width: 3px;
+  stroke: $secondary-color;
+  stroke-width: 5px;
   stroke-linecap: round;
 }
 
 .player {
   fill: none;
-  stroke: #546A76;
+  stroke: $primary-color;
   stroke-width: 10px;
+}
+
+
+.noone {
+  fill: transparent;
 }

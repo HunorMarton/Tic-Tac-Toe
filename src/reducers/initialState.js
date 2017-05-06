@@ -1,6 +1,9 @@
 import * as players from '../constants/players';
 
 export default {
+  game: {
+    currentPlayer: players.CROSS
+  },
   board: {
     b11: players.CROSS,
     b12: players.CIRCLE,
