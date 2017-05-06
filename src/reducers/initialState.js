@@ -2,8 +2,8 @@ import * as players from '../constants/players';
 
 export default {
   board: {
-    b11: players.NOONE,
-    b12: players.NOONE,
+    b11: players.CROSS,
+    b12: players.CIRCLE,
     b13: players.NOONE,
     b21: players.NOONE,
     b22: players.NOONE,

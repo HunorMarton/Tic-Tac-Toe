@@ -1,7 +1,16 @@
 html {
   font-size: 1em;
+  background-color: #B3C5CE;
 }
 
-line {
-  stroke: red;
+.stripe {
+  stroke: #889DA8;
+  stroke-width: 3px;
+  stroke-linecap: round;
+}
+
+.player {
+  fill: none;
+  stroke: #546A76;
+  stroke-width: 10px;
 }
