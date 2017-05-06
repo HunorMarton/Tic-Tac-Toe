@@ -1,7 +1,7 @@
 import * as types from '../constants/actionTypes';
 import * as players from '../constants/players';
 
-export function set(player, block) {
+export function set(block) {
   return function(dispatch) {
     dispatch({
       type: types.SET,
@@ -13,7 +13,7 @@ export function set(player, block) {
         type: types.SET,
         player: players.CIRCLE
       });
-    }, 500);
+    }, 400);
   };
 }
 

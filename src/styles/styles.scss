@@ -5,18 +5,26 @@ $secondary-color: #889DA8;
 
 @font-face {
   font-family: Moon;
-  src: url("MoonLight.otf") format("opentype");
+  src: local('Moon Light'), url("Moon Light.otf") format("opentype");
 }
 
 @font-face {
   font-family: Moon;
   font-weight: bold;
-  src: url("MoonBold.otf") format("opentype");
+  src: local('Moon Bold'), url("Moon Bold.otf") format("opentype");
 }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html {
   font-size: 1em;
   background-color: $background-color;
+}
+
+#container {
+  width: 300px;
+  margin: 50px auto;
+  position: relative;
 }
 
 .stripe {
@@ -36,5 +44,21 @@ html {
 }
 
 .end {
-  font-family: Moon, Helvetica;
+  font-family: 'Moon', 'Roboto', Helvetica, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-color;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  padding-top: 90px;
+  background-color: rgba($background-color,0.9);
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }

@@ -2,7 +2,7 @@ import * as players from '../constants/players';
 
 export default {
   game: {
-    currentPlayer: players.CROSS,
+    gameOver: false,
     winner: players.NOONE
   },
   board: {

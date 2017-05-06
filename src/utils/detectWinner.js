@@ -1,3 +1,5 @@
+import * as players from '../constants/players';
+
 function detectWinning(board, player) {
   // Vertical line
   if(board.b11 === player && board.b12 === player && board.b13 === player) return true;
@@ -16,4 +18,8 @@ function detectWinning(board, player) {
   return false;
 }
 
-export default detectWinning;
+function detectWinner(board) {
+  return detectWinning(board, players.CROSS) ? players.CROSS : detectWinning(board, players.CIRCLE) ? players.CIRCLE : players.NOONE;
+}
+
+export default detectWinner;

@@ -15,7 +15,7 @@ class Block extends React.Component {
       case players.CROSS:
         return <Cross/>;
       default:
-        return <Noone id={this.props.id} currentPlayer={this.props.currentPlayer} set={this.props.actions.set}/>;
+        return <Noone id={this.props.id} set={this.props.actions.set}/>;
     }
   }
 
@@ -35,14 +35,12 @@ class Block extends React.Component {
 Block.propTypes = {
   id: PropTypes.string.isRequired,
   board: PropTypes.object.isRequired,
-  actions: PropTypes.object.isRequired,
-  currentPlayer: PropTypes.string.isRequired
+  actions: PropTypes.object.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    board: state.board,
-    currentPlayer: state.game.currentPlayer
+    board: state.board
   };
 }
 

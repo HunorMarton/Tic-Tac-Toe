@@ -10,9 +10,10 @@ class End extends React.Component {
     this.props.actions.reset();
   }
   render() {
+    const winner = this.props.winner === players.CROSS ? 'You win!' : this.props.winner === players.CIRCLE ? 'Computer wins!' : "It's a draw";
     return (
-      <div className="end">
-        <h1>Winner is {this.props.winner}</h1>
+      <div className="end" style={{display: this.props.gameOver ? 'block' : 'none'}}>
+        <h1>{winner}</h1>
         <a onClick={this.reset.bind(this)}>Reset</a>
       </div>
     );
@@ -21,11 +22,13 @@ class End extends React.Component {
 
 End.propTypes = {
   actions: PropTypes.object.isRequired,
+  gameOver: PropTypes.bool.isRequired,
   winner: PropTypes.string.isRequired
 };
 
 function mapStateToProps(state) {
   return {
+    gameOver: state.game.gameOver,
     winner: state.game.winner
   };
 }

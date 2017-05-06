@@ -2,7 +2,7 @@ import React, {PropTypes}  from 'react';
 
 class Noone extends React.Component {
   set() {
-    this.props.set(this.props.currentPlayer, this.props.id);
+    this.props.set(this.props.id);
   }
 
   render() {
@@ -12,7 +12,6 @@ class Noone extends React.Component {
 
 Noone.propTypes = {
   id: PropTypes.string.isRequired,
-  currentPlayer: PropTypes.string.isRequired,
   set: PropTypes.func.isRequired
 };
 
