@@ -30,6 +30,9 @@ export default function boardReducer(state = initialState.game, action, board) {
         winner
       });
     }
+    case types.RESET: {
+      return initialState.game;
+    }
     default:
       return state;
     }

@@ -3,6 +3,17 @@ $background-color: #B3C5CE;
 $primary-color: #546A76;
 $secondary-color: #889DA8;
 
+@font-face {
+  font-family: Moon;
+  src: url("MoonLight.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Moon;
+  font-weight: bold;
+  src: url("MoonBold.otf") format("opentype");
+}
+
 html {
   font-size: 1em;
   background-color: $background-color;
@@ -26,5 +37,5 @@ html {
 }
 
 .end {
-  
+  font-family: Moon;
 }

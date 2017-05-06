@@ -8,6 +8,9 @@ export default function boardReducer(state = initialState.board, action) {
         [action.block]: action.player
       });
     }
+    case types.RESET: {
+      return initialState.board;
+    }
     default:
       return state;
     }

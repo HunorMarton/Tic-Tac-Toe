@@ -5,10 +5,15 @@ import * as actions from '../actions/boardActions';
 import * as players from '../constants/players';
 
 class End extends React.Component {
+  reset(e) {
+    e.preventDefault();
+    this.props.actions.reset();
+  }
   render() {
     return (
       <div className="end">
-        Winner is {this.props.winner}
+        <h1>Winner is {this.props.winner}</h1>
+        <a onClick={this.reset.bind(this)}>Reset</a>
       </div>
     );
   }

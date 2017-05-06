@@ -6,6 +6,7 @@ import { AppContainer } from 'react-hot-loader';
 import TicTacToe from './containers/TicTacToe';
 import configureStore from './store/configureStore';
 require('./favicon.ico'); // Tell webpack to load favicon.ico
+require('./styles/MoonLight.otf');
 import './styles/styles.scss';
 
 const store = configureStore();
