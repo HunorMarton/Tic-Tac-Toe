@@ -1,11 +1,17 @@
 // Set up your root reducer here...
- import { combineReducers } from 'redux';
- import board from './boardReducer';
- import game from './gameReducer';
+import initialState from './initialState';
+import boardReducer from './boardReducer';
+import gameReducer from './gameReducer';
 
- const rootReducer = combineReducers({
-   board,
-   game
- });
+function rootReducer(state = initialState, action) {
+  
+   const board = boardReducer(state.board, action);
+   const game = gameReducer(state.game, action, board);
 
- export default rootReducer;
+   return {
+     board,
+     game
+   };
+}
+
+export default rootReducer;

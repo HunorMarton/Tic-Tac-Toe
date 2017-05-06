@@ -7,3 +7,9 @@ export function set(player, block) {
     block
   };
 }
+
+export function reset() {
+  return {
+    type: types.RESET
+  };
+}

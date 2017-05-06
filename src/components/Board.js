@@ -2,7 +2,7 @@ import React  from 'react';
 import Block from './Block';
 
 const Board = () => (
-    <div id="container">
+    <div>
       <svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
         <line className="stripe" x1={0} y1={100} x2={300} y2={100} />
         <line className="stripe" x1={0} y1={200} x2={300} y2={200} />
